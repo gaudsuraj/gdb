@@ -5416,6 +5416,7 @@ default_make_symbol_completion_list_break_on_1 (const char *text,
   /* Prepare SYM_TEXT_LEN for compare_symbol_name.  */
 
   if (current_language->la_language == language_cplus
+      || current_language->la_language == language_d
       || current_language->la_language == language_java
       || current_language->la_language == language_fortran)
     {

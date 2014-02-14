@@ -592,7 +592,8 @@ match_partial_symbol (struct objfile *objfile,
 	  center = bottom + (top - bottom) / 2;
 	  gdb_assert (center < top);
 	  if (!do_linear_search
-	      && (SYMBOL_LANGUAGE (*center) == language_java))
+	      && (SYMBOL_LANGUAGE (*center) == language_java
+		  || SYMBOL_LANGUAGE (*center) == language_d))
 	    do_linear_search = 1;
 	  if (ordered_compare (SYMBOL_SEARCH_NAME (*center), name) >= 0)
 	    top = center;
@@ -643,6 +644,7 @@ psymtab_search_name (const char *name)
     {
     case language_cplus:
     case language_java:
+    case language_d:
       {
 	if (strchr (name, '('))
 	  {
@@ -705,7 +707,8 @@ lookup_partial_symbol (struct objfile *objfile,
 	    internal_error (__FILE__, __LINE__,
 			    _("failed internal consistency check"));
 	  if (!do_linear_search
-	      && SYMBOL_LANGUAGE (*center) == language_java)
+	      && (SYMBOL_LANGUAGE (*center) == language_java
+		  || SYMBOL_LANGUAGE (*center) == language_d))
 	    {
 	      do_linear_search = 1;
 	    }
