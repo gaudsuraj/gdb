@@ -837,7 +837,7 @@ SFILES = ada-exp.y ada-lang.c ada-typeprint.c ada-valprint.c ada-tasks.c \
 	charset.c common/cleanups.c cli-out.c coffread.c coff-pe-read.c \
 	complaints.c completer.c continuations.c corefile.c corelow.c \
 	cp-abi.c cp-support.c cp-namespace.c cp-valprint.c \
-	d-exp.y d-lang.c d-namespace.c d-valprint.c \
+	d-exp.y d-lang.c d-namespace.c d-typeprint.c d-valprint.c \
 	cp-name-parser.y \
 	dbxread.c demangle.c dictionary.c disasm.c doublest.c \
 	dtrace-probe.c dummy-frame.c \
@@ -1061,7 +1061,8 @@ COMMON_OBS = $(DEPFILES) $(CONFIG_OBS) $(YYOBJ) \
 	m2-lang.o opencl-lang.o p-lang.o p-typeprint.o p-valprint.o \
 	sentinel-frame.o \
 	complaints.o typeprint.o \
-	ada-typeprint.o c-typeprint.o f-typeprint.o m2-typeprint.o \
+	ada-typeprint.o c-typeprint.o d-typeprint.o f-typeprint.o \
+	m2-typeprint.o \
 	ada-valprint.o c-valprint.o cp-valprint.o d-valprint.o f-valprint.o \
 	m2-valprint.o \
 	serial.o mdebugread.o top.o utils.o \
