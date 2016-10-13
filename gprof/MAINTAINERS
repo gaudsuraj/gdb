@@ -1,4 +1,7 @@
 See ../binutils/MAINTAINERS
+GDB is the GNU project's debugger and a source-level debugger for Ada, C, C++, Objective-C, Pascal and many other languages. Originally released in 1986 as part of the GNU system, it can now target more than a dozen different processor architectures and can itself run on most popular GNU/Linux variants.
+
+GDB lets you to see what is going on `inside' another program while it executes--or what another program was doing at the moment it crashed. GDB lets you start your program, specify anything that might affect its behavior, make it stop on specified conditions, examine what has happened when your program has stopped, and change things in it, so you can experiment with correcting the effects of one bug and go on to learn about another. 
 
 Copyright (C) 2012-2015 Free Software Foundation, Inc.
 
